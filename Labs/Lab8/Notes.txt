@@ -1,0 +1,28 @@
+Signals:
+    -Used by OS communicate with the process
+    -If you want to do something for specific signal, you need to create 
+     signal holder
+    -Creating handler:
+     void handler(int signum){
+        if(signum == SIGNAL){
+            #DO SOMETHING
+        }
+        #Set the signal handler to a specific signal
+        signal(SIGNAL, handler);
+     }
+
+Setjmp:
+    -Takes snapshot of program state
+    -State specific registers: Instruction pointer(rip), stack pointer(rsp)
+     general purpose registers(rax,rbx,rcx,rdx,rsi,rdi,r8-r15)
+    -Does not store the state of heap(malloc, etc)
+    -Stores in jmp_buf
+    -Returns 0 on success
+
+Longjmp:
+    -Restores snapshot and continue from setjmp. as if setjmp returned 
+     non-zero value
+Zero Byte Array:
+    -An array that is initialized with zero bytes
+    -Are placeholder where space is not allocated
+    Programmers will allocate space at runtime

@@ -1,0 +1,15 @@
+Recording following info:
+    Address of student.name: 0x7fffffffe200
+    Addres of student.age: 0x7fffffffe208
+    Address of new_name: 0x7fffffffe1e0
+
+    Address right after back(): 0x000055555555519b
+    Address right after printf(): 0x00005555555551b9
+    Return address of bad(): ?
+
+Objective after part 4 is to find:
+    offset_name: 0x20
+    offset_age: 0x28
+
+Last part:
+    modify return address

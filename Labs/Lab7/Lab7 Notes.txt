@@ -1,0 +1,12 @@
+Compile:
+    as -o reverse_asm.o reverse_asm.s
+    gcc -o program lecture7_list.c reverse_asm.o
+
+Assembly Hints:
+    Operations: movq, mov. and cmpq
+    %r8 = prev
+    %rax = curr node
+    (%rax) = curr -> next
+    %rcx = temp
+
+    // curr = %rax, curr->next = (%rax), prev = %r8

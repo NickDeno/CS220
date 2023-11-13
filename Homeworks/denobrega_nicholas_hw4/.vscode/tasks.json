@@ -1,0 +1,93 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Compile Main",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-c",
+          "-g",
+          "-o",
+          "${workspaceFolder}/main.o",
+          "${workspaceFolder}/main.c"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Compile Fib Seq",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-c",
+          "-g",
+          "-o",
+          "${workspaceFolder}/fib_seq.o",
+          "${workspaceFolder}/fib_seq.s"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Compile Bubble Sort",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-c",
+          "-g",
+          "-o",
+          "${workspaceFolder}/bubble_sort.o",
+          "${workspaceFolder}/bubble_sort.s"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Compile Binary Search",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-c",
+          "-g",
+          "-o",
+          "${workspaceFolder}/binary_search.o",
+          "${workspaceFolder}/binary_search.s"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Link All",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-o",
+          "${workspaceFolder}/main",
+          "${workspaceFolder}/main.o",
+          "${workspaceFolder}/fib_seq.o",
+          "${workspaceFolder}/bubble_sort.o",
+          "${workspaceFolder}/binary_search.o"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "dependsOn": [
+          "Compile Main",
+          "Compile Fib Seq",
+          "Compile Bubble Sort",
+          "Compile Binary Search"
+        ]
+      }
+    ]
+  }
+  
