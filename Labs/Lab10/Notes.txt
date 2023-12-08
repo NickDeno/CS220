@@ -1,0 +1,4 @@
+Thread:
+    Process: an independent program with its own memory space, resources
+             and sate
+    

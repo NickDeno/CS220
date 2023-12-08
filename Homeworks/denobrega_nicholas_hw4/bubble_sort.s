@@ -2,8 +2,8 @@
 .text
 	.global bubble_sort
 
-#Assume array address in rdi
-#Assume array size in rsi
+# Assume array address in rdi
+# Assume array size in rsi
 bubble_sort:
 	#Decrement size(rsi) by 1 and set outer loop idx i(rcx) to 0
 	decq %rsi

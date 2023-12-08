@@ -1,0 +1,6 @@
+
+
+Compile:
+    gcc get_ebp.s -c get_ebp.o -m32
+    gcc get_ebp.o ret-to-libc.c -o -m32 lab9
+

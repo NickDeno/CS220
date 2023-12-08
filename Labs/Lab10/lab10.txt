@@ -1,0 +1,6 @@
+1. The order of print statements is inconsistent across multiple runs
+    because of the fork call, which creates child process. However the 
+    order in which parent and child function is not consistent and cannot be 
+    predicted
+2. The difference in the ordering is that now the child prints first 
+    almost instantly, and the parent prints after a small delay

@@ -2,11 +2,10 @@
 .text
 	.global binary_search
 
-#Assume array address is stored rdi
-#Assume array size is in rsi
-#Assume target is rdx
-
-#rcx = low idx, rbx = high idx, r8 = mid idx, rdx = target, rax = return value
+# Assume array address is stored rdi
+# Assume array size is in rsi
+# Assume target is rdx
+# rcx = low idx, rbx = high idx, r8 = mid idx, rdx = target, rax = return value
 binary_search:
 	#low = 0, high = size-1, set return value to -1
 	movq $0, %rcx  
